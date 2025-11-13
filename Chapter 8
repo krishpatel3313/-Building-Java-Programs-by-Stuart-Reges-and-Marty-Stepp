@@ -18,4 +18,55 @@ A String object's behavior includes its methods, such as length, substring, toUp
 
 5. The state of a Calculator object might include the number that has just been computed, as well as another number that is currently being input. A more complex Calculator object might also include a memory feature that stores an additional value. The behavior of a Calculator object might include methods to add, subtract, multiply, divide, and perhaps carryout other math operations (such as exponentiation, logarithms, and trigonometric functions like sine and cosine).
 
-6. 
+6. A field is a variable that exists inside of an object. A parameter is a variable inside a method whose value is passed in from outside. Fields have different syntax because they are usually declared with the private keyword and not in a method's header. A field's scope is throughout the class, while a parameter's scope is limited to the method.
+
+7. public class Name {
+    String firstName;
+    String lastname;
+    char middleInitial;
+}
+
+8. An accessor provides the client access to some data in the object, while a mutator lets the client change the object's state in some way. Accessors' names often begin with "get" or "is", while mutators' names often begin with "set".
+
+9. d. double result = acct.computeInterest(42);
+
+10. public double distance (Point other) {
+    int dx = x - other.x;
+    int dy = y - other.y;
+    return Math.sqrt(dx * dx + dy * dy);
+}
+
+11. public class Name {
+      String firstName;
+      char middleInitial;
+      String lastName;
+
+    public String getNormalOrder() {
+      return firstName + " " + middleInitial + ". " + lastName;
+    }
+    
+    public String getReverseOrder() {
+      return lastName + ", " + firstName + " " + middleInitial + ".";
+    }
+
+}
+
+12. To make the objects of your class printable, define a toString method in it.
+
+13. c. System.out.println(p1.toString());
+
+14. public String toString() {
+    return "java.awt.Point[x=" + x + ", y=" + y + "]";
+}
+
+15. public String toString() {
+    return firstName + " " + middleInitial + ". " + lastName;
+}
+
+OR
+
+public String toString() {
+    return getNormalOrder();
+}
+
+16. 
