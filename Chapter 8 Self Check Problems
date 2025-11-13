@@ -69,4 +69,16 @@ public String toString() {
     return getNormalOrder();
 }
 
-16. 
+16. point p1 = new point (8,2);
+point p2 = new point (4,3);
+
+System.out.println("p1 is " + p1);
+System.out.println("p2 is " + p2);
+
+translate.p1(1,2);
+translate.p2(-1,10);
+
+System.out.println("p1 is now " + p1);
+System.out.println("p2 is now " + p2);
+
+17. A constructor is 
