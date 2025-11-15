@@ -116,4 +116,74 @@ Objects' fields should be declared private to provide encapsulation, so that ext
 24. To access private fields, create accessor methods that return their values. 
 For example, add a getName method to access the name field of an object.
 
-25. 
+25. public void setX(int newX) {
+x = newX;
+}
+public void setY(int newY) {
+y = newY;
+}
+
+26. public class Name {
+        private String firstName;
+        private char middleInitial;
+        private String lastName;
+  
+    public Name(String initialFirst, char initialMiddle, String initialLast) {
+        firstName = initialFirst;
+        middleInitial = initialMiddle;
+        lastName = initialLast;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public char getMiddleInitial() {
+        return middleInitial;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getNormalOrder() {
+        return firstName + " " + middleInitial + ". " + lastName;
+    }
+
+    public String getReverseOrder() {
+        return lastName + ", " + firstName + " " + middleInitial + ".";
+    }
+}
+
+27. public void setFirstName(String firstName) {
+    this.firstName = firstName;
+}
+
+public void setLastName(String lastName) {
+    this.lastName = lastName;
+}
+
+public void setMiddleInitial(char middleInitial) {
+    this.middleInitial = middleInitial;
+}
+
+28. Encapsulation allows you to change a class's internal implementation without changing its external view to clients. 
+When a class is encapsulated clients cannot directly access its fields, so changing those fields will not disturb client behavior as long as the external view (method behavior) is consistent.
+
+29. Cohesion is the concept of how well a class's contents go together. 
+You can tell that a class is cohesive when each of its fields stores important state related to the object and each method interacts with that state in some way to produce useful behavior.
+
+30. We did not place console I/O code into our Stock class because doing so would force clients to use those exact I/O messages. 
+By keeping I/O code out of Stock, we kept it independent from its clients.
+
+31. public String getSymbol() {
+    return symbol;
+}
+
+public int getTotalShares() {
+    return totalShares;
+}
+
+public double getTotalCost() {
+    return totalCost;
+}
