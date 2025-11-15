@@ -81,4 +81,36 @@ translate.p2(-1,10);
 System.out.println("p1 is now " + p1);
 System.out.println("p2 is now " + p2);
 
-17. A constructor is 
+17. A constructor is a special method that creates an object and initializes its state. 
+It's the method that is called when you use the new keyword. A constructor is declared without a return type.
+
+18. a. The constructor shouldn't have the void keyword in its header, because constructors have no return type.
+    b. The fields x and y shouldn't have their types redeclared in front of them. 
+       This bug causes shadowing of the fields.
+
+19. public Name(String initialFirst, char initialMiddle, String initialLast) {
+        firstName = initialFirst;
+        middleInitial = initialMiddle;
+        lastName = initialLast;
+    }
+
+20. The keyword this refers to the object on which a method or constructor has been called (sometimes called the "implicit parameter"). 
+It is used to access or set the object's field values, to call the object's methods, or to call one constructor from another.
+
+21. public Point(Point p) {
+    this.x = p.x;
+    this.y = p.y;
+}
+OR
+public Point(Point p) {
+    this(p.x, p.y);
+}
+
+22. Abstraction is the ability to focus on a problem at a high level without worrying about the minor details. 
+Objects provide abstraction by giving us more powerful pieces of data that have sophisticated behavior without having to manage and manipulate the data directly.
+
+23. Items declared public may be seen and used from any class. 
+Items declared private may be seen and used only from within their own classes. 
+Objects' fields should be declared private to provide encapsulation, so that external code can't make unwanted direct modifications to the fields' values.
+
+24. 
