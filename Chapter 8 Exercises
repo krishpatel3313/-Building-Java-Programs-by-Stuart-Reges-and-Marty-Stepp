@@ -90,6 +90,34 @@ if (total < 0) {
 }
 
 
-9. 
+9. public void scale(int factor) {
+if (factor < 0) throw new IllegalArgumentException("factor must be >= 0");
+int total = (this.hours * 60 + this.minutes) * factor ;
+this.hours = total / 60;
+this.minutes = total % 60;
+}
 
-9. 
+
+10. public void clear() {
+    totalShares = 0;
+    totalCost = 0.0;
+}
+
+
+11. public class BankAccount {
+        String name;
+        double balance;
+        double transactionFee;
+    public void deposit(double amount) {
+        balance = balance + amount;
+    }
+    public void withdraw(double amount) {
+        double total = amount + transactionFee;
+        if (total <= balance) {
+            balance = balance - total;
+        }
+    }
+}
+
+
+12. 
