@@ -120,4 +120,53 @@ this.minutes = total % 60;
 }
 
 
-12. 
+12. public String toString() { 
+        return name + ", $" + String.format("%.2f", balance);
+    }
+
+
+13. public void transfer(BankAccount other, double amount) {                  
+        if (amount <= 0 || balance <= 5.0) return;  
+
+    double moved = Math.min(amount, balance - 5.0); 
+        balance -= moved + 5.0;                      
+        other.balance += moved;                      
+}
+
+
+14. import java.awt.Point;
+
+public class Line {
+    private final Point p1;
+    private final Point p2;
+public Line(Point p1, Point p2) {
+    this.p1 = new Point(p1);  
+    this.p2 = new Point(p2);
+    }
+public Point getP1() { 
+        return new Point(p1);     
+    }
+public Point getP2() { 
+        return new Point(p2);
+    }
+public String toString() {
+        return String.format("[(%d, %d), (%d, %d)]", p1.x, p1.y, p2.x, p2.y);
+    }
+}
+
+
+15. public double getSlope() {
+int dy = p2.y - p1.y;
+int dx = p2.x - p1.x;
+if (dx == 0) throw new IllegalArgumentException ("The slope is not defined at these points");
+return (double) dy/dx ;
+}
+
+
+16. public Line(int x1, int y1, int x2, int y2) {
+        this.p1 = new java.awt.Point(x1, y1);
+        this.p2 = new java.awt.Point(x2, y2);
+    }
+
+
+17. 
